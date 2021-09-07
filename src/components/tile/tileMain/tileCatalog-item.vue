@@ -1,6 +1,7 @@
 <template>
   <div 
   class="catalog-item" 
+  @click="showMobDevise"
   :style="{'background-image': 'url(' + require('../../../imagine/img/'+ catalog_item.image) + ')' }" 
   >
       <div v-show="testShoew"  class="context">
@@ -74,6 +75,10 @@ export default {
                 this.showBlock = false;
             } 
          },
+
+         showMobDevise() {
+             this.testShoew = true;
+         }
 
     },
 
