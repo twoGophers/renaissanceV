@@ -10,8 +10,8 @@
          </div>
          <div class="context_price">
             <div class="priceValut">
-                <p class="priceValut_p1">{{catalog_item.price}}</p>
-                <p class="priceValut_p2">{{catalog_item.newPrice}}</p>
+                <p class="priceValut_p1">{{catalog_item.price}}$</p>
+                <p class="priceValut_p2">{{catalog_item.newPrice}}$</p>
             </div>
             <button @click="addToCart">Купить</button>
          </div>
@@ -100,8 +100,8 @@ export default {
 
 <style lang="scss" scoped>
 .catalog-item{
-    width: 280px;
-    height: 210px;
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,7 +166,67 @@ export default {
     grid-column: span 2;
     grid-row: span 2;
     width: 100%;
-    height: auto;
   }
+}
+
+@media screen and (max-width : 1245px){ 
+    .catalog-item {
+        .context{
+            &_title{
+                .title-text{
+                    font-size: 100%;
+                }
+            }
+            &_price {
+                .priceValut{
+                    &_p2 {
+                        font-size: 100%;
+                    }
+                }
+                button {
+                    font-size: 80%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 615px) {
+    .catalog-item {
+        //height: 110%;
+        &:nth-child(3) {
+        grid-column: span 2;
+        grid-row: span 2;
+        width: 100%;
+        }
+        .context{
+            padding-top: 0px;
+        }
+    }
+}
+@media screen and (max-width : 470px) {
+    .catalog-item {
+        margin: 2%;
+        width: 80%;
+        height: 130px;
+        display: flex;
+            &:nth-child(3) {
+                width: 80%;
+                display: flex;
+            }
+            .context {
+                padding: 5px;
+            }
+    }
+}
+@media screen and (max-width : 350px) { 
+.catalog-item {
+    margin: 5%;
+    width: 100%;
+            &:nth-child(3) {
+                width: 100%;
+                display: flex;
+            }
+}
 }
 </style>

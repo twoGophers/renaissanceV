@@ -19,10 +19,11 @@ export default {
 
 <style lang="scss" scoped>
 .main{
-  width: 1920px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+
 }
 </style>

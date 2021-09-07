@@ -49,7 +49,7 @@ export default {
 
     tovar_all(value) {
       if(value) {
-        setInterval(this.arrayCatalog = [...this.CATALOG], 1000)
+        this.arrayCatalog = [...this.CATALOG]
       } 
     },
 
@@ -87,8 +87,9 @@ export default {
 
 <style lang="scss" scoped>
 .catalog {
-  width: 1216px;
+  // width: 1216px;
   height: 935px;
+
   // display: flex;
   // flex-wrap: wrap;
   // flex-flow: wrap;
@@ -99,9 +100,64 @@ export default {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-gap: 2%;
   grid-auto-flow: dense;
   counter-reset: item;
 }
+
+@media screen and (max-width : 1245px){ 
+  .catalog {
+    height: 700px;
+    display: grid;
+    grid-gap: 1%;
+    grid-auto-flow: dense;
+    counter-reset: item;
+  }
+}
+
+
+@media screen and (max-width : 812px){
+ .catalog {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 1%;
+    grid-auto-flow: dense;
+    counter-reset: item;
+    height: 900px;
+    float: left;
+ }
+}
+@media screen and (max-width : 730px){ 
+ .catalog {
+   height: 920px;
+ }
+}
+@media screen and (max-width : 615px){
+ .catalog {
+   position: relative;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 1%;
+    grid-auto-flow: dense;
+    counter-reset: item;
+    height: 1200px;
+ }
+}
+
+@media screen and (max-width : 470px){
+ .catalog {
+   display: flex;
+   flex-direction: column;
+   height: max-content;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+ }
+}
+
 
 </style>

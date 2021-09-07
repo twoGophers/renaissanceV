@@ -39,7 +39,7 @@ methods : {
 
 <style lang="scss" scoped>
 .auction-item{
-    width: 280px;
+    width: 100%;
     height: 210px;
     display: flex;
     justify-content: center;

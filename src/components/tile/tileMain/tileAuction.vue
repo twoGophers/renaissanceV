@@ -46,10 +46,11 @@ export default {
 
 <style lang="scss" scoped>
 .auction{
+  min-height: 250px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-gap: 2%;
   grid-auto-flow: dense;
   position: relative;
 
@@ -57,10 +58,52 @@ export default {
     width: 100%;
     position:absolute ;
     text-align: center;
+    margin-top: 5%;
     h2 {
       font-weight: 400;
       opacity: 0.5;
     }
+  }
+}
+
+@media screen and (max-width : 1245px){  
+  .auction {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 1%;
+    grid-auto-flow: dense;
+    position: relative;
+  }
+}
+
+@media screen and (max-width : 1100px){
+  .auction {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width : 800px){
+  .auction {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2%;
+  }
+}
+@media screen and (max-width : 500px){
+  .auction {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4%;
+  }
+}
+
+@media screen and (max-width : 375px){
+  .auction {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
   }
 }
 </style>

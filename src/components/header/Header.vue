@@ -10,8 +10,8 @@
             </div>
         </div>
 
-        <div>
-            <router-link :to ="{name : 'auction'}" class="basket">
+        <div class="basket">
+            <router-link :to ="{name : 'auction'}" >
                 <img src="../../imagine/img/icon.svg" alt="icon">
                 <div class="basket_basket">
                     <p>КОРЗИНА</p>
@@ -43,33 +43,34 @@ export default {
 
 <style lang="scss" scoped>
 header {
-    width: 1740px;
+    width: 90%;
     height: 48px;
-    margin: 52px 90px 0px 90px;
     display: flex;
+    margin-top: 5%;
+    margin-left: 5%;
     justify-content: space-between;
     align-items: center;
     .logo {
-        width: 246px;
+        width: 22%;
         height: 100%;
         display: flex;
         align-items: center;
         &_img {
-            width: 48px;
-            height: 48px;
+            width: 15%;
+            height: auto;
             img {
                 width: 100%;
             }
         }
         &_text {
-            width: 174px;
-            height: 40px;
-            margin-left: 24px;
+            width: 70%;
+            height: auto;
+            margin-left: 12%;
             display: flex;
             justify-content: center;
             align-items: center;
             p{
-            font-size: 14px;
+            font-size: 100%;
             line-height: 20px;
             letter-spacing: 0.04em;
             text-transform: uppercase;
@@ -77,16 +78,21 @@ header {
         }
     }
     .basket {
-        width: 127px;
-        height: 23px;
+        width: 12%;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
-        align-items: center;
         cursor: pointer;
+        a {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
         &_basket {
             p {
-                width: 71px;
+                margin-left: 6%;
+                width: 100%;
                 font-size: 14px;
                 line-height: 20px;
                 word-break: break-all;
@@ -115,5 +121,77 @@ header {
     }
 }
 
+@media screen and (max-width : 1445px){
+    header{
+        .logo{
+            &_text {
+                p {
+                    font-size: 75%;
+                }
+            }
+        }
+    }
+}
 
+@media screen and (max-width : 1150px){
+    header {
+        .logo {
+            width: 30%;
+        }
+        .basket {
+            a{
+                display: flex;
+                justify-content: space-around;
+            }
+            &_basket {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 800px){
+    header {
+        .logo {
+            width: 40%;
+        }
+    }
+}
+@media screen and (max-width : 600px){
+    header {
+        .logo {
+            width: 50%;
+        }
+    }
+}
+@media (max-width : 490px) and (min-width : 220px){
+    header {
+        width: 95%;
+        .logo {
+            width: 75%;
+            &_text {
+                p {
+                    font-size: 65%;
+                }
+            }
+        }
+        .basket{
+            width: 25%;
+        }
+    }
+}
+@media (max-width : 490px) and (min-width : 375px){
+    header {
+            background-color: rgba(27, 23, 23, 1);
+            position: sticky;
+            top : 10px;
+            z-index: 999;
+        
+        .basket{
+            position: sticky;
+            top : 10px;
+            z-index: 999;
+        }
+    }
+}
 </style>

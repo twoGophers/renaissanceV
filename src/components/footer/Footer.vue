@@ -19,41 +19,72 @@ export default {
 
 <style lang="scss" scoped>
 footer {
-    margin-top: 230px;
-    width: 1920px;
-    height: 218px;
+    margin-top: 8%;
+    width: 100%;
     background: url("../../imagine/img/08axbr721.png");
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 
     .adress{
-        width: 253px;
-        height: 58px;
-        margin-left: 352px;
-        margin-top: 90px;
+        width: 30%;
+        height: 50%;
+        margin: 5%;
         p{
             font: 400;
             font-family: Roboto;
             font-style: normal;
             font-weight: normal;
-            font-size: 18px;
+            font-size: 100%;
             line-height: 150%;
         }
     }
     .registr{
         width: 238px;
         height: 27px;
-        margin-left: 725px;
-        margin-top: 105px;
         p{
             font: 400;
             font-family: Roboto;
             font-style: normal;
             font-weight: normal;
-            font-size: 18px;
+            //font-size: 95%;
             line-height: 150%;
             opacity: 0.6;
         }
     }
 }
+
+@media screen and (max-width : 1245px){ 
+    footer{
+        .adress{
+            margin: 3%;
+            p{
+                font-size: 90%;
+            }
+        }
+    }
+}
+@media screen and (max-width : 693px){ 
+    footer {
+        margin-top: 14%;
+        flex-direction: column;
+        .adress{
+            width: 50%;
+        }
+    }
+}
+
+@media screen and (max-width : 422px){
+    footer {
+        margin-top: 14%;
+        flex-direction: column;
+        .adress{
+            width: 80%;
+        }
+        .registr {
+            width: 80%;
+        }
+    }
+ }
 </style>

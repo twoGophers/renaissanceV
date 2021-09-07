@@ -61,24 +61,26 @@ export default {
 
 <style lang="scss" scoped>
 .tileTop{
-    width: 1216px;
-
+    width: 80%;
+    margin-top: 5%;
+    margin-bottom: 3%;
     position: relative;
+
 ///////
     &_title{
-        width: 765px;
-        height: 272px;
-        margin-top: 80px;
-        margin-left: 226px;
+        width: 100%;
+        margin-top: 10%;
         display: flex;
         align-items: center;
         p{
-            height: 199px;
+            margin-bottom: 5%;
+            // outline: 1px solid white;
+            height: 70%;
             font-family: 'Lora', serif;
             //font-style: italic;
             font-weight: normal;
             font-size: 96px;
-            line-height: 90px;
+            line-height: 100%;
             text-align: center;
             letter-spacing: 0.02em;
             //text-transform: uppercase;
@@ -88,8 +90,8 @@ export default {
 ////
     &_img {
         position: absolute;
-        left: 353px;
-        top : 80px;
+        left: 30%;
+        top : 20%;
         img {
             width: 100%;
         }
@@ -100,9 +102,9 @@ export default {
     justify-content: space-between;
     align-items: flex-end;
     &_filter{
-        width: 279px;
+        width: 30%;
         height: 34px;
-        margin-top: 79px;
+        margin-top: 7%;
         a {
             padding: 5px 16.3px;
             opacity: 0.5;
@@ -113,7 +115,6 @@ export default {
             }
 
             &.exact-active{
-                outline: 1px solid rgba(196, 196, 196, 1);
                 color: rgba(196, 196, 196, 1);
                 opacity: 1;
             }
@@ -121,13 +122,14 @@ export default {
 
     }
     &_search {
-        width: 488px;
+        width: 40%;
         height: 42px;
         display: flex;
         flex-wrap: wrap;
-        input {
 
-            width: 217px;
+        input {
+            margin-left: 4%;
+            width: 70%;
             height: 24px;
             font-size: 16px;
             line-height: 150%;
@@ -147,8 +149,7 @@ export default {
             &::-ms-clear { display: none; }
         }
         .btn{
-            margin-left: 192px;
-            width: 78px;
+            width: 20%;
             height: 20px;
             display: flex;
             flex-direction: row;
@@ -171,7 +172,7 @@ export default {
             }
         }
         hr {
-            width: 488px;
+            width: 100%;
             height: 1px;
             opacity: 0.5;
             box-sizing: border-box;
@@ -183,4 +184,105 @@ export default {
 
 }
 
+@media screen and (max-width : 1164px){ 
+    .tileTop {
+        width: 90%;
+        &_title{
+            width: 100%;
+            p{
+                font-size: 450%;
+            }
+        }
+         &_img {
+             img {
+                 width: 80%;
+             }
+         }
+         .filter-search{
+              &_filter {
+                  width: 50%;
+              }
+              &_search{
+                  width: 30%;
+                  p {
+                      display: none;
+                  }
+              }
+         }
+    }
+}
+
+@media screen and (max-width : 635px){ 
+    .tileTop {
+        &_title {
+            p{
+                font-size: 330%;
+            }
+        }
+        &_img{
+            img {
+                width: 60%;
+            }
+        }
+        .filter-search {
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+             &_filter{
+                 width: 100%;
+                 justify-content: center;
+                 display: flex;
+                 align-items: center;
+             }
+             &_search {
+                margin-top: 10%;
+                margin-bottom: 2%;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                input {
+                    width: 40%;
+                }
+             }
+        }
+    }
+}
+
+@media screen and (max-width : 470px){
+    .tileTop {
+        &_title {
+            p{
+                font-size: 270%;
+            }
+        }
+        &_img{
+            top: 8%;
+            img {
+                width: 80%;
+            }
+        }
+        .filter-search{
+            margin-top: 10%;
+        }
+    }
+}
+@media screen and (max-width : 387px){
+    .tileTop {
+        &_title {
+            p{
+                font-size: 240%;
+            }
+        }
+        &_img{
+            top: 8%;
+            img {
+                width: 85%;
+            }
+        }
+        .filter-search{
+            margin-top: 10%;
+        }
+    }
+}
 </style>

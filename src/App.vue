@@ -78,15 +78,30 @@ button {
 }
 html {
   box-sizing: border-box;
+  background-color: rgba(27, 23, 23, 1);
 }
 *, *::before, *::after {
   box-sizing: inherit;
 }
 body {
-  max-width: 1920px;
-  height: 1971px;
   margin: 0;
   padding: 0;
-  background-color: rgba(27, 23, 23, 1);
+}
+#app {
+    //height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media screen and (max-width : 1245px){ 
+  button {
+    width: 70px;
+    height: 30px;
+    order: 0;
+    padding: 0px;
+    
+  }
 }
 </style>
